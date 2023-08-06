@@ -1,17 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 using ModLoader;
+using SFS.IO;
+using UITools;
 
 namespace SFSZoomKeys
 {
-    public class Main : Mod
+    public class Main : Mod, IUpdatable
     {
-
         public override string ModNameID => "Neptune.ZoomKeys.Mod";
         public override string DisplayName => "Zoom Keys";
         public override string Author => "NeptuneSky";
         public override string MinimumGameVersionNecessary => "1.5.10.2";
         public override string ModVersion => "v1.0.0";
         public override string Description => "Adds bindable zoom keys to the game. For trackpad users or people who are otherwise unable to zoom.";
+
+        public Dictionary<string, FilePath> UpdatableFiles => new ()
+        {
+            {
+                "https://github.com/Neptune-Sky/SFSZoomKeys/releases/latest/download/SFSZoomKeys.dll",
+                new FolderPath(ModFolder).ExtendToFile("SFSZoomKeys.dll")
+            }
+        };
 
         public static Main main;
         
@@ -25,5 +35,7 @@ namespace SFSZoomKeys
             main = this;
             Config.Load();
         }
+
+        
     }
 }
