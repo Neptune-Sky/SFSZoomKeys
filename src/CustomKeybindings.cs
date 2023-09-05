@@ -40,14 +40,14 @@ namespace SFSZoomKeys
             main = SetupKeybindings<ZoomKeybindings>(Main.main);
             SceneHelper.OnWorldSceneLoaded += OnWorldLoad;
             SceneHelper.OnBuildSceneLoaded += OnBuildLoad;
-            
-            AddOnKeyDown(main.OpenMenu, Config.Open);
         }
 
         private static void OnBuildLoad()
         {
             BuildManager.main.build_Input.keysNode.AddOnKey(main.Zoom[0], () => Zoom_Build());
             BuildManager.main.build_Input.keysNode.AddOnKey(main.Zoom[1], () => Zoom_Build(true));
+            
+            AddOnKeyDown_Build(main.OpenMenu, Config.Open);
         }
         private static void OnWorldLoad()
         {
@@ -56,6 +56,8 @@ namespace SFSZoomKeys
             
             GameManager.main.map_Input.keysNode.AddOnKey(main.Zoom[0], () => Zoom_Map()); 
             GameManager.main.map_Input.keysNode.AddOnKey(main.Zoom[1], () => Zoom_Map(true)); 
+            
+            AddOnKeyDown_World(main.OpenMenu, Config.Open);
         }
 
         public override void CreateUI()
