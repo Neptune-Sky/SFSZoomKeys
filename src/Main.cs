@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using ModLoader;
 using SFS.IO;
 using UITools;
 
 namespace SFSZoomKeys
 {
+    [UsedImplicitly]
     public class Main : Mod, IUpdatable
     {
         public override string ModNameID => "Neptune.ZoomKeys.Mod";
