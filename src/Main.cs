@@ -14,7 +14,7 @@ namespace SFSZoomKeys
         public override string DisplayName => "Zoom Keys";
         public override string Author => "NeptuneSky";
         public override string MinimumGameVersionNecessary => "1.5.10.2";
-        public override string ModVersion => "v1.0.1";
+        public override string ModVersion => "v1.0.2";
         public override string Description => "Adds bindable zoom keys to the game. For trackpad users or people who are otherwise unable to zoom.";
 
         public Dictionary<string, FilePath> UpdatableFiles => new ()
