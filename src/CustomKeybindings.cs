@@ -19,7 +19,7 @@ namespace SFSZoomKeys
             KeyCode.Minus
         };
 
-        public readonly Key OpenMenu = KeyCode.F9;
+        public readonly Key OpenMenu = KeyCode.F10;
     }
 
     public class ZoomKeybindings : ModKeybindings
