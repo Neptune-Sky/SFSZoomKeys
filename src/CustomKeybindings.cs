@@ -51,8 +51,8 @@ namespace SFSZoomKeys
         }
         private static void OnWorldLoad()
         {
-            GameManager.main.world_Input.keysNode.AddOnKey(main.Zoom[0], () => ZoomExec(GameManager.main)); 
-            GameManager.main.world_Input.keysNode.AddOnKey(main.Zoom[1], () => ZoomExec(GameManager.main, true)); 
+            GameManager.main.world_Input.keysNode.AddOnKey(main.Zoom[0], () => ZoomExec(PlayerController.main)); 
+            GameManager.main.world_Input.keysNode.AddOnKey(main.Zoom[1], () => ZoomExec(PlayerController.main, true)); 
             
             GameManager.main.map_Input.keysNode.AddOnKey(main.Zoom[0], () => ZoomExec(Map.view)); 
             GameManager.main.map_Input.keysNode.AddOnKey(main.Zoom[1], () => ZoomExec(Map.view, true)); 
@@ -81,23 +81,6 @@ namespace SFSZoomKeys
         public static float ZoomDelta(bool zoomingOut)
         {
             return 1 + (zoomingOut ?  Config.settings.zoomSpeed : -Config.settings.zoomSpeed) / 100;
-        }
-        public static void Zoom_Build(bool zoomOut = false)
-        {
-            Traverse.Create(BuildManager.main).Method("OnZoom", new ZoomData(ZoomDelta(zoomOut), new TouchPosition(Input.mousePosition)))
-                .GetValue();
-        }
-
-        public static void Zoom_World(bool zoomOut = false)
-        {
-            Traverse.Create(PlayerController.main).Method("OnZoom", new ZoomData(ZoomDelta(zoomOut), new TouchPosition(Input.mousePosition)))
-                .GetValue();
-        }
-
-        public static void Zoom_Map(bool zoomOut = false)
-        {
-            Traverse.Create(Map.view).Method("OnZoom", new ZoomData(ZoomDelta(zoomOut), new TouchPosition(Input.mousePosition)))
-                .GetValue();
         }
     }
 }

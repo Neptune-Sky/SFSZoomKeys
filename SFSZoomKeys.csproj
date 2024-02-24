@@ -48,24 +48,6 @@
         <Reference Include="Coffee.SoftMaskForUGUI">
           <HintPath>References\Coffee.SoftMaskForUGUI.dll</HintPath>
         </Reference>
-        <Reference Include="Firebase.Analytics">
-          <HintPath>References\Firebase.Analytics.dll</HintPath>
-        </Reference>
-        <Reference Include="Firebase.App">
-          <HintPath>References\Firebase.App.dll</HintPath>
-        </Reference>
-        <Reference Include="Firebase.Messaging">
-          <HintPath>References\Firebase.Messaging.dll</HintPath>
-        </Reference>
-        <Reference Include="Firebase.Platform">
-          <HintPath>References\Firebase.Platform.dll</HintPath>
-        </Reference>
-        <Reference Include="Firebase.TaskExtension">
-          <HintPath>References\Firebase.TaskExtension.dll</HintPath>
-        </Reference>
-        <Reference Include="Google.MiniJson">
-          <HintPath>References\Google.MiniJson.dll</HintPath>
-        </Reference>
         <Reference Include="ICSharpCode.SharpZipLib">
           <HintPath>References\ICSharpCode.SharpZipLib.dll</HintPath>
         </Reference>
@@ -277,9 +259,6 @@
         <Reference Include="UnityEngine.ClothModule">
           <HintPath>References\UnityEngine.ClothModule.dll</HintPath>
         </Reference>
-        <Reference Include="UnityEngine.CloudBuild">
-          <HintPath>References\UnityEngine.CloudBuild.dll</HintPath>
-        </Reference>
         <Reference Include="UnityEngine.ClusterInputModule">
           <HintPath>References\UnityEngine.ClusterInputModule.dll</HintPath>
         </Reference>
@@ -427,17 +406,11 @@
         <Reference Include="UnityEngine.UIElementsModule">
           <HintPath>References\UnityEngine.UIElementsModule.dll</HintPath>
         </Reference>
-        <Reference Include="UnityEngine.UIElementsNativeModule">
-          <HintPath>References\UnityEngine.UIElementsNativeModule.dll</HintPath>
-        </Reference>
         <Reference Include="UnityEngine.UIModule">
           <HintPath>References\UnityEngine.UIModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UmbraModule">
           <HintPath>References\UnityEngine.UmbraModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.UNETModule">
-          <HintPath>References\UnityEngine.UNETModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
           <HintPath>References\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
